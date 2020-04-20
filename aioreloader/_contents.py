@@ -110,7 +110,7 @@ def reload():
     if sys._xoptions:
         for k, v in sys._xoptions.items():
             if type(v) == bool:
-                xopt.append(f"-X{k}")
+                xopt.append("-X{}".format(k))
             else:
                 xopt.append("-X{}={}".format(k, v))
 
