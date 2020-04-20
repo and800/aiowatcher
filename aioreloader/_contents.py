@@ -107,7 +107,7 @@ def reload():
         reload_hook()
 
     xopt = []
-    if sys._xoptions:
+    if hasattr(sys, "_xoptions") and sys._xoptions:
         for k, v in sys._xoptions.items():
             if type(v) == bool:
                 xopt.append("-X{}".format(k))
