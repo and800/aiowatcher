@@ -112,7 +112,7 @@ def reload():
             if type(v) == bool:
                 xopt.append(f"-X{k}")
             else:
-                xopt.append(f"-X{k}={v}")
+                xopt.append("-X{}={}".format(k, v))
 
     if sys.platform == "win32":
         subprocess.Popen([sys.executable] + xopt + sys.argv)
