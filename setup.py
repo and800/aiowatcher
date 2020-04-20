@@ -33,5 +33,4 @@ setup(
     ],
     keywords="aiohttp asyncio",
     packages=["aioreloader"],
-    extras_require={':python_version=="3.5"': ["asyncio"],},
 )
